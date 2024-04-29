@@ -1,9 +1,15 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AdminLogin from "./Components/Pages/Admin/AdminLogin/AdminLogin";
 
 function App() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/adminlogin" element={<AdminLogin />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
