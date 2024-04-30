@@ -1,0 +1,48 @@
+.patientLogin {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F72AF;
+    height: 50%;
+    margin: 10px auto;
+    padding: 50px 100px;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-wrapper .form-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.form-wrapper .form-group label {
+    width: 40%;
+}
+
+.form-wrapper .form-group input {
+    width: 60%;
+}
+
+.form-wrapper button {
+    background-color: #112D4E;
+    color: #fff;
+    padding: 10px 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
