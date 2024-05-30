@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Dashboard.css';
 import AppointmentList from '../Appoinments/AppointmentList';
 import PatientList from '../Patients/Patient';
@@ -34,22 +34,35 @@ const Dashboard = () => {
       </div>
       <div className='DoctorDashboardContent'>
         <div className='DoctorDashboardSideBar'>
-          <div className='DoctorDashboardSideBarTab'>
+          <div
+            className={`DoctorDashboardSideBarTab ${
+              activeTab === "appointments" ? "active" : ""
+              }`}>
             <a onClick={() => handleTabChange('appointments')}>Appointments</a>
           </div>
-          <div className='DoctorDashboardSideBarTab'>
+          <div className={`DoctorDashboardSideBarTab ${
+              activeTab === "patients" ? "active" : ""
+              }`}>
             <a onClick={() => handleTabChange('patients')}>Patients</a>
           </div>
-          <div className='DoctorDashboardSideBarTab'>
+          <div className={`DoctorDashboardSideBarTab ${
+              activeTab === "medicalRecords" ? "active" : ""
+              }`}>
             <a onClick={() => handleTabChange('medicalRecords')}>Medical Records</a>
           </div>
-          <div className='DoctorDashboardSideBarTab'>
+          <div className={`DoctorDashboardSideBarTab ${
+              activeTab === "prescriptions" ? "active" : ""
+              }`}>
             <a onClick={() => handleTabChange('prescriptions')}>Prescriptions</a>
           </div>
-          <div className='DoctorDashboardSideBarTab'>
+          <div className={`DoctorDashboardSideBarTab ${
+              activeTab === "calendar" ? "active" : ""
+              }`}>
             <a onClick={() => handleTabChange('calendar')}>Calendar</a>
           </div>
-          <div className='DoctorDashboardSideBarTab'>
+          <div className={`DoctorDashboardSideBarTab ${
+              activeTab === "settings" ? "active" : ""
+              }`}>
             <a onClick={() => handleTabChange('settings')}>Settings</a>
           </div>
         </div>
