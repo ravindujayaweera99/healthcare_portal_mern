@@ -72,6 +72,11 @@
     /* background-color: #32373c; */
 }
 
+.DoctorDashboardSideBarTab.active{
+    background-color: #3F72AF;
+    color: #fff;
+}
+
 .DoctorDashboardSideBarTab a{
     cursor: pointer;
     padding: 3% 10%;
