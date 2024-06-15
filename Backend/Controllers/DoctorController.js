@@ -52,7 +52,7 @@ export const createDoctor = async (req, res) => {
 
     // Create a new user
     const newDoctor = await Doctor.create({ doctor_id, name, email, password, specialization, licenseNumber, imgUrl, status: 'ACTIVE'});
-    res.status(201).send({ success: true, message: 'Doctor created successfully.', newDoctor });
+    res.status(200).send({ success: true, message: 'Doctor created successfully.', newDoctor });
   } catch (error) {
     console.error('Error creating user:', error);
     res.status(400).send({ success: false, message: 'Error creating Doctor.' });
@@ -80,7 +80,7 @@ export const fetchDoctor = async (req, res) => {
 export const fetchDoctors = async (req, res) => {
     try {
       const doctors = await Doctor.find();
-      res.status(201).send(doctors);
+      res.status(200).send(doctors);
     } catch (error) {
       res.status(500).send(error);
     }
