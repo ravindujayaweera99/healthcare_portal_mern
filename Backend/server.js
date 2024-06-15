@@ -7,9 +7,14 @@ const PORT = process.env.PORT;
 const MONGODB_URL = process.env.MONGODB_URL;
 const app = express();
 
+import doctorRoutes from './Routes/DoctorRoutes.js'; 
+
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
+
+// Use the doctor routes
+app.use('', doctorRoutes);
 
 // Connect to MongoDB
 mongoose.connect(MONGODB_URL)
